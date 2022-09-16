@@ -36,7 +36,7 @@ public class AC {
 					if(deque.isEmpty())
 					{
 						bw.write("error\n");
-						break;
+						return;
 					}
 					else if(ht==0)
 						deque.pollFirst();
@@ -45,14 +45,8 @@ public class AC {
 						deque.pollLast();
 						
 				}
-				if(deque.isEmpty()&&j==rd.length()-1)
-				{
-					bw.write("[]\n");
-					break;
-				}
 			}
-			if(deque.isEmpty())
-				continue;
+			
 			if(ht==0)
 			{
 				bw.write(deque.toString().replace(" ","")+"\n");
